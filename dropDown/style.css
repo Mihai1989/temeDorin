@@ -1,110 +1,85 @@
 *{
-	padding:0;
-	margin:0;
-	box-sizing:border-box;
-}
-
-html{
-	height:100%;
-}
-
-div {
-	min-height:100%;
-	width:100%;
-	position:relative;
-}
-
-body{
-	height:100%;
-	background:#ddd;
+  box-sizing:border-box;
+  font-family:"Dosis", sans-serif;
 }
 
 .menu {
-	width:100%;
-	display:block;
-	margin:0 auto;
-	text-align: center;
-	text-transform: uppercase;
+	background: #0779d4;
 }
 
-.menu a{
-	display:block;
-	text-decoration: none;
-	font-family: monospace;
-	font-weight: bold;
-	font-size:13pt;
-	color:#fff;
-}
-
-.menu a:hover{
-	background:#45a3ef;
-	color:#fff;
-}
-
-.menu > ul{
-	list-style: none;
-	display: flex;
+.menu ul {
+	position: relative;
+  width: 80%;
+	padding: 0;
+	display:flex;
 	flex-direction:row;
-	margin: 10px;
-}
-
-.menu ul li{
-	width:100%;
-	height:40px;
-	line-height: 40px;
-	background:#0779d4;
-}
-
-.menu ul ul li{
 	position: relative;
-	display: none;
+	background-color: #0779d4;
+  margin: 0 auto;
 }
 
-.menu ul ul ul {
+.menu ul li {
 	position: relative;
-	display: none;
-}
-
-.menu ul ul ul li {
-	position: relative;
-	display: none;
-}
-
-.menu ul ul ul ul {
-	position: relative;
-	display: none;
-
-}
-
-.menu ul li:hover ul li {
-	display: block;
-	animation: navmenu 500ms forwards;
-}
-
-.menu ul ul li:hover > ul {
 	display:block;
-	position:relative;
-	left: 100%;
-	top: -100%;
+  list-style-type:none;
+	width: 100%;
+	background: #0779d4;
+  padding-right:2em;
+	text-align: center;
+  font-weight: bold;
 }
 
-@media only screen and (max-width: 700px) {
-	.menu ul{
-		display: flex;
-		flex-direction:column;
+.menu ul:last-child li {
+	padding-right: 0;
+}
 
-	}
+.menu ul li a{
+  display:flex;
+  text-decoration:none;
+  color: #fff;
+  padding:1rem;
+  justify-content: center;
+}
 
-	.menu ul li:hover ul li {
-		display: block;
-		position: fixed;
-		animation: navmenu 500ms forwards;
-	}
+.menu ul li a:hover{
+	background: #45a3ef;
+  color: #fff;
+}
 
-	.menu ul ul li:hover > ul {
-		display:block;
-		position:relative;
-		
-	}
+.menu ul ul {
+    display: none;
+    position:absolute;
+		background: #0779d4;
+		width: 100%;
+}
 
+.menu ul li:hover > ul {
+	display:block;
+	background: #82c3ef;
+  color: #fff;
+	position: absolute;
+}
+
+.menu ul li:hover > a {
+		background: #3498db;
+}
+
+.menu ul li:hover > ul a{
+  color:#fff;
+}
+
+.menu ul ul ul{
+	width: 100%;
+	background: #82c3ef;
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+
+.menu ul ul ul ul{
+	width: 100%;
+	background: #82c3ef;
+	position: absolute;
+	left: 100%;
+	top: 0;
 }
