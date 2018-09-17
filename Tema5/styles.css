@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 30px;
+}
+ul {
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+}
+li {
+	flex: 0 0 10%;
+}
+li::after {
+	content: '';
+	display: block;
+	padding-bottom: 100%;
+	background-color: #999;
+	margin: 1px;
+}
+
+ul li:nth-child(16n+1)::after {
+	background-color: #005c00;
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari 3-8 */
+    transform: rotate(10deg);
+}
+
+ul li:nth-child(32n+1)::after {
+	background-color: #005c00;
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari 3-8 */
+    transform: rotate(10deg);
+}
+
+ul li:nth-child(32n+17)::after {
+	background-color: #005c00;
+	-ms-transform: rotate(80deg); /* IE 9 */
+    -webkit-transform: rotate(80deg); /* Safari 3-8 */
+    transform: rotate(80deg);
+}
+
+ul li:first-child::after {
+	background-color: #005c00;
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari 3-8 */
+    transform: rotate(10deg);
+}
+
+li:nth-child(8n+5)::after{
+	background-color: #171717;
+}
+
+li:nth-child(8n+2)::after{
+	background-color: #171717;
+}
+
+li:nth-child(8n+8)::after{
+	background-color: #171717;
+}
+
+li:nth-child(8n+7)::after{
+	background-color: #171717;
+}
+
+li:nth-child(-1n+30)::after{
+	opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul li:nth-child(30) ~ li:nth-child(-1n+40){
+	opacity: 0.7;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul li:nth-child(140) ~ li:nth-child(-1n+170){
+	opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
