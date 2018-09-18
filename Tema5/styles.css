@@ -38,15 +38,15 @@ ul li:nth-child(24n+13)::after {
     transform: rotate(80deg);
 }
 
-li:nth-child(2n+2)::after{
+li:nth-child(2n+2)::after {
 	background-color: #171717;
 }
 
-li:nth-child(6n+3){
+li:nth-child(6n+3) {
 	flex: 0 0 20%;
 }
 
-li:nth-child(6n+3)::after{
+li:nth-child(6n+3)::after {
 
 	padding-bottom: 50%;:
 }
@@ -55,22 +55,47 @@ li:nth-child(6n+6) {
 	flex: 0 0 20%;
 }
 
-li:nth-child(6n+6)::after{
+li:nth-child(6n+6)::after {
 	background-color: #171717;
 	padding-bottom: 50%;
 }
 
-li:nth-child(-1n+30)::after{
-	opacity: 0.5;
+li:nth-child(-1n+8)::after {
+	opacity: 0.15;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-ul li:nth-child(30) ~ li:nth-child(-1n+40){
-	opacity: 0.7;
+ul li:nth-child(8) ~ li:nth-child(-1n+15)::after {
+	opacity: 0.30;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-ul li:nth-child(140) ~ li:nth-child(-1n+170){
-	opacity: 0.5;
+ul li:nth-child(15) ~ li:nth-child(-1n+22)::after {
+	opacity: 0.45;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul li:nth-child(22) ~ li:nth-child(-1n+30)::after {
+	opacity: 0.70;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ ul li:nth-last-child(-1n+7)::after {
+	opacity: 0.15;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul li:nth-last-child(n+8):nth-last-child(-n+16)::after {
+	opacity: 0.30;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul li:nth-last-child(n+17):nth-last-child(-n+22)::after {
+	opacity: 0.45;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul li:nth-last-child(n+23):nth-last-child(-n+30)::after {
+	opacity: 0.70;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
